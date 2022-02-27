@@ -1,9 +1,12 @@
 package br.com.fabricio.loja;
 
+import br.com.fabricio.loja.acao.EnviarEmailPedido;
+import br.com.fabricio.loja.acao.SalvarPedidoNoBancoDeDados;
 import br.com.fabricio.loja.pedido.GeraPedido;
 import br.com.fabricio.loja.pedido.GeraPedidoHandler;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class TestesPedido {
     public static void main(String[] args) {
@@ -12,7 +15,8 @@ public class TestesPedido {
         int quantidadeDeIntes = Integer.parseInt(args[2]);
 
         GeraPedido gerador = new GeraPedido(ciente, valorOrcamento, quantidadeDeIntes);
-        GeraPedidoHandler handler = new GeraPedidoHandler(/*dependencias*/);
+        GeraPedidoHandler handler =
+                new GeraPedidoHandler(Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido()));
         handler.execute(gerador);
     }
 }
