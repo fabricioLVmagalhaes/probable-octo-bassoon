@@ -1,6 +1,7 @@
 package br.com.fabricio.loja;
 
 import br.com.fabricio.loja.desconto.CalculadoraDeDescontos;
+import br.com.fabricio.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 

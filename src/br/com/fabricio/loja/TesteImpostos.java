@@ -2,6 +2,7 @@ package br.com.fabricio.loja;
 
 import br.com.fabricio.loja.imposto.CalculadoraDeImpostos;
 import br.com.fabricio.loja.imposto.ICMS;
+import br.com.fabricio.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 
