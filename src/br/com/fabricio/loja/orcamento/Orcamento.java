@@ -55,4 +55,8 @@ public class Orcamento {
     public void setSituacao(SituacaoOrcamento situacao) {
         this.situacao = situacao;
     }
+
+    public boolean isNotFinalizado() {
+        return !(situacao instanceof Finalizado);
+    }
 }
