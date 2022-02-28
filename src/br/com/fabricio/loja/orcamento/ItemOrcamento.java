@@ -1,0 +1,15 @@
+package br.com.fabricio.loja.orcamento;
+
+import java.math.BigDecimal;
+
+public class ItemOrcamento implements Orcavel{
+    BigDecimal valor;
+
+    public ItemOrcamento(BigDecimal valor) {
+        this.valor = valor;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+}
