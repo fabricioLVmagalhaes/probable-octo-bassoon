@@ -1,6 +1,7 @@
 package br.com.fabricio.loja;
 
 import br.com.fabricio.loja.acao.EnviarEmailPedido;
+import br.com.fabricio.loja.acao.LogDePedido;
 import br.com.fabricio.loja.acao.SalvarPedidoNoBancoDeDados;
 import br.com.fabricio.loja.pedido.GeraPedido;
 import br.com.fabricio.loja.pedido.GeraPedidoHandler;
@@ -16,7 +17,7 @@ public class TestesPedido {
 
         GeraPedido gerador = new GeraPedido(ciente, valorOrcamento, quantidadeDeIntes);
         GeraPedidoHandler handler =
-                new GeraPedidoHandler(Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido()));
+                new GeraPedidoHandler(Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido(), new LogDePedido()));
         handler.execute(gerador);
     }
 }
